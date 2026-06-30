@@ -11,6 +11,9 @@
   --tk-muted:#6b7280;
   --tk-line:#eceef1;
   --tk-shadow:0 10px 30px rgba(17,17,26,.10),0 4px 10px rgba(17,17,26,.06);
+  --tk-pink:#fde9f1;       /* TallyKhata light pink */
+  --tk-pink-line:#f3cdda;
+  --tk-gold:#ffd400;
 }
 
 .tk-nav *,.tk-footer *{box-sizing:border-box}
@@ -19,7 +22,7 @@
 .tk-nav{
   position:sticky;top:0;z-index:9999;
   background:#fff;
-  font-family:'Poppins','SolaimanLipi',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  font-family:'Roboto','Noto Sans Bengali',system-ui,-apple-system,Segoe UI,sans-serif;
   border-bottom:1px solid var(--tk-line);
   transition:box-shadow .25s ease;
 }
@@ -29,7 +32,7 @@
   height:74px;display:flex;align-items:center;gap:18px;
 }
 .tk-nav__logo{display:flex;align-items:center;flex:0 0 auto}
-.tk-nav__logo img{height:42px;width:auto;display:block}
+.tk-nav__logo img{height:29px;width:auto;display:block}
 
 /* ---------- Menu list ---------- */
 .tk-menu{
@@ -69,6 +72,21 @@
 }
 .tk-cta:hover{background:var(--tk-red-dark);transform:translateY(-2px);box-shadow:0 10px 22px rgba(196,22,28,.38)}
 .tk-cta svg{width:16px;height:16px}
+
+/* ---------- Language switch ---------- */
+.tk-lang{
+  flex:0 0 auto;display:inline-flex;align-items:center;
+  border:1px solid var(--tk-line);border-radius:999px;padding:3px;background:#fff;
+  margin-left:4px;
+}
+.tk-lang a{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-width:34px;height:28px;padding:0 11px;border-radius:999px;
+  font-size:13px;font-weight:600;text-decoration:none;color:var(--tk-muted);
+  transition:background .18s ease,color .18s ease;
+}
+.tk-lang a:hover{color:var(--tk-red)}
+.tk-lang a.active{background:var(--tk-red);color:#fff}
 
 /* ---------- Dropdown panels (shared) ---------- */
 .tk-drop,.tk-mega{
@@ -116,9 +134,10 @@
 /* ============================ MOBILE ============================ */
 @media (max-width:992px){
   .tk-nav__inner{height:64px}
-  .tk-nav__logo img{height:36px}
+  .tk-nav__logo img{height:25px}
   .tk-burger{display:inline-flex}
   .tk-cta.tk-cta--desktop{display:none}
+  .tk-lang{margin-left:auto}
 
   .tk-menu{
     position:fixed;top:0;right:0;height:100dvh;width:min(360px,86vw);
@@ -152,46 +171,47 @@
   .tk-cta--mobile{display:none}
 }
 
-/* ============================ FOOTER ============================ */
+/* ============================ FOOTER (light pink) ============================ */
 .tk-footer{
-  background:#16181d;color:#c7ccd4;
-  font-family:'Poppins','SolaimanLipi',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  background:var(--tk-pink);color:#5b4a4e;
+  font-family:'Roboto','Noto Sans Bengali',system-ui,-apple-system,Segoe UI,sans-serif;
   font-size:15px;line-height:1.7;
 }
-.tk-footer a{color:#c7ccd4;text-decoration:none;transition:color .18s ease,padding-left .18s ease}
+.tk-footer a{color:#6b565b;text-decoration:none;transition:color .18s ease,padding-left .18s ease}
 .tk-footer__top{
   max-width:1280px;margin:0 auto;padding:60px 22px 44px;
   display:grid;grid-template-columns:1.5fr 1fr 1fr 1.4fr;gap:40px;
 }
-.tk-footer__brand p{margin:18px 0 22px;max-width:300px;color:#9aa1ac}
-.tk-footer__logo{height:44px;width:auto;filter:brightness(0) invert(1)}
+.tk-footer__brand p{margin:18px 0 22px;max-width:300px;color:#7a6469}
+.tk-footer__logo{height:31px;width:auto}
 .tk-footer h5{
-  color:#fff;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--tk-red);font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
   margin:0 0 18px;position:relative;padding-bottom:12px;
 }
 .tk-footer h5::after{content:"";position:absolute;left:0;bottom:0;width:30px;height:2px;background:var(--tk-red);border-radius:2px}
 .tk-footer ul{list-style:none;margin:0;padding:0}
 .tk-footer li{margin:0 0 11px}
-.tk-footer__links a:hover{color:#fff;padding-left:5px}
-.tk-footer__contact li{display:flex;gap:11px;align-items:flex-start;color:#9aa1ac}
+.tk-footer__links a:hover{color:var(--tk-red);padding-left:5px}
+.tk-footer__contact li{display:flex;gap:11px;align-items:flex-start;color:#7a6469}
 .tk-footer__contact svg{width:18px;height:18px;flex:0 0 auto;margin-top:3px;color:var(--tk-red)}
-.tk-footer__contact a:hover{color:#fff}
+.tk-footer__contact a:hover{color:var(--tk-red)}
 
 .tk-social{display:flex;gap:11px;margin-top:4px}
 .tk-social a{
   width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;
-  background:rgba(255,255,255,.07);color:#c7ccd4;transition:background .2s ease,color .2s ease,transform .2s ease;
+  background:#fff;color:var(--tk-red);box-shadow:0 2px 6px rgba(196,22,28,.10);
+  transition:background .2s ease,color .2s ease,transform .2s ease;
 }
 .tk-social a:hover{background:var(--tk-red);color:#fff;transform:translateY(-3px)}
 .tk-social svg{width:18px;height:18px}
 
-.tk-footer__bottom{border-top:1px solid rgba(255,255,255,.09)}
+.tk-footer__bottom{border-top:1px solid var(--tk-pink-line)}
 .tk-footer__bottom-inner{
   max-width:1280px;margin:0 auto;padding:20px 22px;
   display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
-  font-size:13.5px;color:#8b929c;
+  font-size:13.5px;color:#8a7378;
 }
-.tk-footer__bottom a:hover{color:#fff}
+.tk-footer__bottom a:hover{color:var(--tk-red)}
 .tk-footer__bottom-links{display:flex;gap:22px}
 
 @media (max-width:900px){
