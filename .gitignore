@@ -3,3 +3,6 @@
 
 # Local helper / server logs
 server.log
+
+# Distribution zip (uploaded to GitHub via the web, not tracked in git)
+tallykhata-home.zip
