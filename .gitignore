@@ -1,0 +1,5 @@
+# Local backups (originals before the menu was removed) — kept on disk, not published
+*.bak
+
+# Local helper / server logs
+server.log
