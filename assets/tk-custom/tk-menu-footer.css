@@ -84,9 +84,10 @@
 .has-drop:hover>.tk-drop,.has-drop:focus-within>.tk-drop{opacity:1;visibility:visible;transform:translateY(0)}
 
 /* mega menu, centred under the bar */
-.tk-mega{left:50%;transform:translate(-50%,10px);width:min(900px,calc(100vw - 44px));padding:22px 24px}
+.tk-mega{left:50%;transform:translate(-50%,10px);width:min(1060px,calc(100vw - 44px));padding:22px 24px}
 .has-mega:hover>.tk-mega,.has-mega:focus-within>.tk-mega{opacity:1;visibility:visible;transform:translate(-50%,0)}
-.tk-mega__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px 26px}
+.tk-mega__grid{display:flex;flex-wrap:wrap;gap:6px 22px}
+.tk-mega__col{flex:1 1 200px;min-width:178px}
 .tk-mega__col h4{
   margin:4px 0 8px;font-size:12px;font-weight:700;letter-spacing:.12em;
   text-transform:uppercase;color:var(--tk-red);
@@ -141,7 +142,7 @@
   .tk-menu>li.open-acc>.tk-drop,
   .tk-menu>li.open-acc>.tk-mega{display:block}
   .tk-menu>li.open-acc>.tk-link .tk-caret{transform:rotate(180deg);color:var(--tk-red)}
-  .tk-mega__grid{grid-template-columns:1fr;gap:2px}
+  .tk-mega__grid{display:block;gap:2px}
   .tk-mega__col h4{padding:10px 12px 4px}
   .tk-sub{padding:11px 18px;font-size:15px}
   .tk-sub:hover{padding-left:22px}
