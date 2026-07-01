@@ -111,8 +111,8 @@
 /* mega menu, centred under the bar */
 .tk-mega{left:50%;transform:translate(-50%,10px);width:min(1060px,calc(100vw - 44px));padding:22px 24px}
 .has-mega:hover>.tk-mega,.has-mega:focus-within>.tk-mega{opacity:1;visibility:visible;transform:translate(-50%,0)}
-.tk-mega__grid{display:flex;flex-wrap:wrap;gap:6px 22px}
-.tk-mega__col{flex:1 1 200px;min-width:178px}
+.tk-mega__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px 22px}
+.tk-mega__col{min-width:0}
 .tk-mega__col h4{
   margin:4px 0 8px;font-size:12px;font-weight:700;letter-spacing:.12em;
   text-transform:uppercase;color:var(--tk-red);
