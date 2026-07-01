@@ -6,3 +6,6 @@ server.log
 
 # Distribution zip (uploaded to GitHub via the web, not tracked in git)
 tallykhata-home.zip
+
+# Local page generator (not published)
+_build/
