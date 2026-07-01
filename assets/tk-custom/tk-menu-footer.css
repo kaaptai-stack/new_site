@@ -127,6 +127,9 @@
   transition:background .16s ease,color .16s ease,padding-left .16s ease;
 }
 .tk-sub:hover{background:var(--tk-red-tint);color:var(--tk-red);padding-left:16px}
+/* items with no content yet — dull / matt */
+.tk-sub--dim{color:#a2a8b0;opacity:.65}
+.tk-sub--dim:hover{background:transparent;color:#a2a8b0;padding-left:12px;cursor:default}
 
 /* ---------- Hamburger ---------- */
 .tk-burger{
