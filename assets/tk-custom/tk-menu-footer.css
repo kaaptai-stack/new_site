@@ -181,7 +181,7 @@
 
 /* ============================ Marquee (auto-sliding rows) ============================ */
 .tk-marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
-.tk-marquee__track{display:flex;gap:12px;width:max-content;animation:tk-scroll var(--tk-dur,44s) linear infinite}
+.tk-marquee__track{display:flex;gap:12px;width:max-content;animation:tk-scroll var(--tk-dur,72s) linear infinite}
 .tk-marquee:hover .tk-marquee__track{animation-play-state:paused}
 .tk-marquee--rev .tk-marquee__track{animation-direction:reverse}
 @keyframes tk-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
