@@ -43,8 +43,8 @@
       });
     });
 
-    /* close drawer when a real link is tapped */
-    menu.querySelectorAll("a.tk-sub, a.tk-link[href]:not([href='#']), .tk-cta").forEach(function (a) {
+    /* close drawer when a real (leaf) link is tapped — but NOT the accordion toggles */
+    menu.querySelectorAll("a.tk-sub, .tk-cta, li:not(.has-mega):not(.has-drop) > a.tk-link[href]:not([href='#'])").forEach(function (a) {
       a.addEventListener("click", function () { if (MOBILE()) setOpen(false); });
     });
 

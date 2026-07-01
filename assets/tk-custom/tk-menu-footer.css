@@ -161,7 +161,8 @@
 
   /* panels become inline accordions */
   .tk-drop,.tk-mega{
-    position:static;opacity:1;visibility:visible;transform:none;width:auto;
+    position:static !important;opacity:1 !important;visibility:visible !important;
+    transform:none !important;left:auto !important;right:auto !important;width:auto;
     border:0;box-shadow:none;border-radius:0;padding:0 0 8px;
     display:none;
   }
